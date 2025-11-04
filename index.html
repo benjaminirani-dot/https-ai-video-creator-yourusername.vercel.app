@@ -118,7 +118,7 @@
       };
       log('Calling Grok...');
       try {
-        const r = await fetch('/api/generate-script', {
+        const r = await fetch('/api/generate-script.js', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
@@ -137,7 +137,7 @@
       log('Generating video...');
       els.videoContainer.innerHTML = '<p class="text-gray-400">Processing…</p>';
       try {
-        const r = await fetch('/api/generate-video', {
+        const r = await fetch('/api/generate-video.js', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
